@@ -5,7 +5,7 @@ async function get_faal() {
   const options = { method: "GET" };
   let faal = "";
 
-  await fetch("http://127.0.0.1:8000/", options)
+  await fetch(server_url, options)
     .then((response) => response.json())
     .then((response) => (faal = response["faal"]))
     .catch((err) => console.error(err));
